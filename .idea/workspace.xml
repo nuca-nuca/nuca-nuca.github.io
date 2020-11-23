@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24edb183-8956-45f9-b977-75f9b250d89b" name="Default Changelist" comment="messige" />
+    <list default="true" id="24edb183-8956-45f9-b977-75f9b250d89b" name="Default Changelist" comment="scc&#10;flex direction">
+      <change afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +56,14 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\class1" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -63,6 +74,8 @@
       <option name="presentableId" value="Default" />
       <updated>1604261741288</updated>
       <workItem from="1604261748192" duration="730000" />
+      <workItem from="1606132878947" duration="1595000" />
+      <workItem from="1606173181198" duration="707000" />
     </task>
     <task id="LOCAL-00001" summary="messige">
       <created>1606072586224</created>
@@ -71,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606072586224</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="messige">
+      <created>1606073012318</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606073012318</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -91,7 +111,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="messige" />
-    <option name="LAST_COMMIT_MESSAGE" value="messige" />
+    <MESSAGE value="scc&#10;flex direction" />
+    <option name="LAST_COMMIT_MESSAGE" value="scc&#10;flex direction" />
   </component>
   <component name="WindowStateProjectService">
     <state x="437" y="188" key="#Notifications" timestamp="1604262083524">
@@ -102,13 +123,17 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1606070601809" />
+    <state x="463" y="106" key="FileChooserDialogImpl" timestamp="1606149841167">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="106" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1606149841167" />
     <state x="561" y="262" key="Github.ShareDialog" timestamp="1604262023962">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="561" y="262" key="Github.ShareDialog/0.0.1366.728@0.0.1366.728" timestamp="1604262023962" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1606072613400">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1606173772654">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1606072613400" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1606173772654" />
   </component>
 </project>
