@@ -2,71 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>The History of Dogs as Pets</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>my map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+    <style>
+        #my-map {height: 100vh;}
+    </style>
+    <script src="qalaqebi.js"></script>
 </head>
 <body>
-<'alt'img src="data:image/png;base64,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">
+<div id="my-map"></div>
+<script>
+    var mymap = L.map('my-map').setView([41.7766913,44.7827444,6], 8);
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox/streets-v11',
+        tileSize: 512,
+        zoomOffset: -1,
+        accessToken: 'pk.eyJ1IjoibnVjYSIsImEiOiJja2psZ2VsMDYwODUzMnNsOXgxNGZ4cG12In0.zAs38N8jTOyjPd05-NfvQQ'
+    }).addTo(mymap);
 
-<div class="conteiner">
-    <h1 class="orange">
-        The History of Dogs as Pets
-    </h1>
-
-    <p class="gray" >
-        In honor of National Dog Day, ABC News looked back at how our furry four-legged companions evolved from feral wolves into our best friends.
-
-        It was originally believed the first domesticated wolves appeared around 15,000 years ago in the Middle East. New evidence,<a href="https://www.smithsonianmag.com/science-nature/how-wolves-really-became-dogs-180970014/"> however,</a> suggests it was much earlier than that. Swedish geneticist Pontus Skoglund published a study last year in the journal Current Biology, describing his findings of a 35,000-year-old Siberian wolf bone. He concluded that canine domestication may have first occurred 27,000 to 40,000 years ago.
-    </p>
-
-    <h2 class="orange">
-        Dog
-    </h2>
-    <p class="gray">
-        Dog, (Canis lupus familiaris), domestic mammal of the family Canidae (order Carnivora). It is a subspecies of the gray wolf (Canis lupus) and is related to foxes and jackals. The dog is one of the two most ubiquitous and most popular domestic animals in the world (the cat is the other). For more than 12,000 years it has lived with humans as a hunting companion, protector, object of scorn or adoration, and friend.
-    </p>
-
-    <p class="gray">
-        The dog evolved from the gray wolf into more than 400 distinct breeds. Human beings have played a major role in creating dogs that fulfill distinct societal needs. Through the most rudimentary form of genetic engineering, dogs were bred to accentuate instincts that were evident from their earliest encounters with humans. Although details about the evolution of dogs are uncertain, the first dogs were hunters with keen senses of sight and smell. Humans developed these instincts and created new breeds as need or desire arose.
-    </p>
-
-    <p class="gray">
-        Dogs are regarded differently in different parts of the world. Characteristics of loyalty, friendship, protectiveness, and affection have earned dogs an important position in Western society, and in the United States and Europe the care and feeding of dogs has become a multibillion-dollar business. Western civilization has given the relationship between human and dog great importance, but, in some of the developing nations and in many areas of Asia, dogs are not held in the same esteem. In some areas of the world, dogs are used as guards or beasts of burden or even for food, whereas in the United States and Europe dogs are protected and admired. In ancient Egypt during the days of the pharaohs, dogs were considered to be sacred.
-    </p>
-     <div class="item">
-         <H3 id="first" class="orange">
-             Ancestry
-         </H3>
-         <p class="blue">
-             Paleontologists and archaeologists have determined that about 60 million years ago a small mammal, rather like a weasel, <a href="https://www.nationalgeographic.com/animals/mammals/d/domestic-dog/" target="blank">lived in </a> the environs of what are now parts of Asia. It is called Miacis, the genus that became the ancestor of the animals known today as canids: dogs, jackals, wolves, and foxes. Miacis did not leave direct descendants, but doglike canids evolved from it. By about 30 to 40 million years ago Miacis had evolved into the first true dog—namely, Cynodictis. This was a medium-size animal, longer than it was tall, with a long tail and a fairly brushy coat. Over the millennia Cynodictis gave rise to two branches, one in Africa and the other in Eurasia. The Eurasian branch was called Tomarctus and is the progenitor of wolves, dogs, and foxes.
-         </p>
-
-         <p class="blue">
-             The timing and location of dog domestication is less clear and has been a matter of significant debate, but there is strong genetic evidence that the first domestication events occurred somewhere in Central Asia before 15,000 years ago. Some genetic studies have suggested that wolves were domesticated 16,300 years ago to serve as livestock in China. Other genetic studies, however, have suggested that dog domestication began as early as 18,800–32,100 years ago in Europe or that early dogs dating from about 12,000 to 14,000 years ago came from a small strain of gray wolf that inhabited what is now India. Thereafter this wolf—known as Canis lupus pallipes—was widely distributed throughout Europe, Asia, and North America. However, one genetic study that compared the DNA of dogs and wolves inhabiting areas thought to have been centres of dog domestication suggests that dogs and modern wolves belong to separate lineages that share a common ancestor. It is also possible that some of the dogs of today descended not from the wolf but rather from the jackal. These dogs, found in Africa, might have given rise to some of the present native African breeds. A genetic study examining the migration of dogs to the Americas revealed evidence that dogs did not accompany the first humans to the New World more than 15,000 years ago; the study suggested that dogs came to the Americas only 10,000 years ago.
-         </p>
-         <p class="blue">
-             No matter what their origins, all canids have certain common characteristics. They are mammals that bear live young. The females have mammary glands, and they suckle their offspring. The early breeds had erect ears and pointed or wedge-shaped muzzles, similar to the northern breeds common today. Most of the carnivores have similar dental structures, which is one way paleontologists have been able to identify them. They develop two sets of teeth, deciduous (“baby”) teeth and permanent teeth.
-         </p>
-
-         <div class="item">
-             <h4 class="orange">
-                 Domestication
-             </h4>
-             <p class="blue">
-                 It is likely that wild canids were scavengers near tribal campsites at the same time that ancient humans discovered a hunting partner in the animals that ventured close by. In ancient Egypt, dogs were thought to possess godlike characteristics. They were pampered by their own servants, outfitted with jeweled collars, and fed the choicest diet. Only royalty was permitted to own purebred dogs, and upon the death of a ruler his favourite dog was often interred with him to protect him from harm in the afterlife.
-             </p>
-
-             <p class="blue">
-                 Illustrations of dogs dating from the Bronze Age have been found on walls, tombs, and scrolls throughout Europe, the Middle East, and North America. Often the dogs are depicted hunting game with their human counterparts. Statues of dogs guard the entrances to burial crypts. In many cases these dogs clearly resemble modern canines. Such relics are indelible testimony to the importance that humans have given to the dog throughout the ages.
-             </p>
-             <p class="blue">
-                 Canids walk on their toes, in contrast to an animal like the bear, which is flat-footed and walks on its heels. Dogs, like most mammals, have body hair and are homeothermic—that is to say, they have an internal thermostat that permits them to maintain their body temperature at a constant level despite the outside temperature.
-             </p>
-
-         </div>
-     </div>
-
-</div>
+    for (let i=0; i<Markers.length; i++) {
+        Markers[i].marker=L.marker( [Markers[i].lat, Markers [i].lng]).addTo(mymap);
+        Markers[i].marker.bindPopup(Markers[i].title);
+    }
+</script>
 
 </body>
 </html>
