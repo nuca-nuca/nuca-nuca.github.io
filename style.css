@@ -1,0 +1,28 @@
+
+h1 {
+    color:chocolate;
+}
+h3 {
+    color: #baba28;
+}
+h2 {
+    color: yellow;
+}
+h4 {
+    color: coral;
+}
+h5 {color: lightcoral}
+.red {color: #6344b8
+}
+h6 {color: chocolate}
+h7 {color: yellow}
+h8 {color: coral}
+h9 {color: lightcoral}
+h10 {color: yellow}
+.yallow {color: yellow}
+p {
+    border:2px solid black;
+    padding:30px;
+    background:#90b2ff;
+    margin:40px;
+}
